@@ -25,8 +25,9 @@ jobs:
     steps:
     - name: Download text file
       uses: actions/download-artifact@v4.1.9
-      with:      
-        path: ./artifacts
+      with:
+        name: hello-artifact
+        path: ./artifacts/hello.txt
 
     - name: Display content of the text file
       run: cat ./artifacts/hello.txt
